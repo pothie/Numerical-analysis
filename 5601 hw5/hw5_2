@@ -1,0 +1,37 @@
+hw5_2
+
+word =
+
+    'pneumonoultramicroscopicsilicovolcanoconiosis'
+%a
+All the vowels: aeiou
+
+%b
+All the consonants: clmnprstv
+
+%c
+Distinct letters in alphabetical order, followed by the number of times it appears: 
+    "a"    "   2"
+    "c"    "   6"
+    "e"    "   1"
+    "i"    "   6"
+    "l"    "   3"
+    "m"    "   2"
+    "n"    "   4"
+    "o"    "   9"
+    "p"    "   2"
+    "r"    "   2"
+    "s"    "   4"
+    "t"    "   1"
+    "u"    "   2"
+    "v"    "   1"
+
+%d
+No vowels: pnmnltrmcrscpcslcvlcncnss
+sentence without vowels:A pr f prs frm pr ppl r pkng t thr prs pprprtly n  stck f ppr.
+
+%i
+no_vowel_sen('I have never been to Asia so I am really excited about going to Japan next autumn.')
+ans = 
+    "sentence without vowels: I hv nvr bn t As s I m rlly xctd bt gng t Jpn nxt tmn."
+diary

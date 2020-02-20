@@ -1,0 +1,11 @@
+hw6_4c
+Original Data
+      no pivoting   partial pivoting  full pivoting
+mean   4.2743e-10   3.5579e-12        3.1108e-12
+std    4.7643e-09   2.6087e-11        1.9988e-11
+
+Logarithmic Data
+      no pivoting   partial pivoting  full pivoting
+mean  -10.2687      -11.9441          -12.002
+std   0.62794       0.45283           0.46495
+diary

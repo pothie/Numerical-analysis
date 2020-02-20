@@ -1,0 +1,948 @@
+hw14_1
+f=sin(x).^2
+error in trapezoidal: 0.081361
+error in midpoints: -0.042827
+error in simpsons: 2.0126e-09
+f=exp(sin(x).^2)
+error in trapezoidal: 0.16771
+error in midpoints: -0.088918
+error in simpsons: 1.7858e-08
+f=sin(2*pi*x).^2
+error in trapezoidal: -0.5
+error in midpoints: -0.5
+error in simpsons: -2.8222e-09
+f=exp(sin(2*pi*x).^2)
+error in trapezoidal: -0.75339
+error in midpoints: -0.75339
+error in simpsons: 2.7529e-07
+M = [1 1 1 1;1 1/3 -1/3 -1;1 1/9 1/9 1;1 1/27 -1/27 -1]
+
+M =
+
+    1.0000    1.0000    1.0000    1.0000
+    1.0000    0.3333   -0.3333   -1.0000
+    1.0000    0.1111    0.1111    1.0000
+    1.0000    0.0370   -0.0370   -1.0000
+
+b = [2;0;2/3;0]
+
+b =
+
+    2.0000
+         0
+    0.6667
+         0
+
+format compact
+A = [M;b]
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('vertcat')" style="font-weight:bold">vertcat</a>
+Dimensions of arrays being concatenated are not consistent.} 
+A = [M b]
+A =
+    1.0000    1.0000    1.0000    1.0000    2.0000
+    1.0000    0.3333   -0.3333   -1.0000         0
+    1.0000    0.1111    0.1111    1.0000    0.6667
+    1.0000    0.0370   -0.0370   -1.0000         0
+rref(A)
+ans =
+    1.0000         0         0         0    0.2500
+         0    1.0000         0         0    0.7500
+         0         0    1.0000         0    0.7500
+         0         0         0    1.0000    0.2500
+class1130
+hw14_3
+[Warning: Failure at t=-2.998333e+00.  Unable to meet integration tolerances without reducing the step size below the smallest value allowed (7.105427e-15) at
+time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998330e+00.  Unable to meet integration tolerances without reducing the step size below the smallest value allowed (7.105427e-15) at
+time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m', 299)" style="font-weight:bold">ode23</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m',299,0)">line 299</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998330e+00.  Unable to meet integration tolerances without reducing the step size below the smallest value allowed (7.105427e-15) at
+time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode113', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m', 425)" style="font-weight:bold">ode113</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m',425,0)">line 425</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998346e+00.  Unable to meet integration tolerances without reducing the step size below the smallest value allowed (7.105427e-15) at
+time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode15s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m', 730)" style="font-weight:bold">ode15s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m',730,0)">line 730</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998337e+00.  Unable to meet integration tolerances without reducing the step size below the smallest value allowed (1.065223e-14) at
+time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m', 401)" style="font-weight:bold">ode23s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m',401,0)">line 401</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998344e+00.  Unable to meet integration tolerances without reducing the step size below the smallest value allowed (1.065226e-14) at
+time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23t', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m', 647)" style="font-weight:bold">ode23t</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m',647,0)">line 647</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998339e+00.  Unable to meet integration tolerances without reducing the step size below the smallest value allowed (1.065224e-14) at
+time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23tb', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m', 553)" style="font-weight:bold">ode23tb</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m',553,0)">line 553</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+hw14_3
+[Warning: Failure at t=-2.998333e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998330e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m', 299)" style="font-weight:bold">ode23</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m',299,0)">line 299</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998330e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode113', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m', 425)" style="font-weight:bold">ode113</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m',425,0)">line 425</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998346e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode15s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m', 730)" style="font-weight:bold">ode15s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m',730,0)">line 730</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998337e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.065223e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m', 401)" style="font-weight:bold">ode23s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m',401,0)">line 401</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998344e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.065226e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23t', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m', 647)" style="font-weight:bold">ode23t</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m',647,0)">line 647</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+[Warning: Failure at t=-2.998339e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.065224e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23tb', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m', 553)" style="font-weight:bold">ode23tb</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m',553,0)">line 553</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 8)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',8,0)">line 8</a>)] 
+hw14_3
+[Warning: Failure at t=-2.998333e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998330e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m', 299)" style="font-weight:bold">ode23</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m',299,0)">line 299</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998330e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode113', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m', 425)" style="font-weight:bold">ode113</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m',425,0)">line 425</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998346e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode15s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m', 730)" style="font-weight:bold">ode15s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m',730,0)">line 730</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998337e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.065223e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m', 401)" style="font-weight:bold">ode23s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m',401,0)">line 401</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998344e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.065226e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23t', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m', 647)" style="font-weight:bold">ode23t</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m',647,0)">line 647</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998339e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.065224e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23tb', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m', 553)" style="font-weight:bold">ode23tb</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m',553,0)">line 553</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+hw14_4
+{Index exceeds array bounds.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4>@(t,y)y(2)')" style="font-weight:bold">hw14_4>@(t,y)y(2)</a>
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('odearguments', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/private/odearguments.m', 90)" style="font-weight:bold">odearguments</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/private/odearguments.m',90,0)">line 90</a>)
+f0 = feval(ode,t0,y0,args{:});   % ODE15I sets args{1} to yp0.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 115)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',115,0)">line 115</a>)
+  odearguments(FcnHandlesUsed, solver_name, ode, tspan, y0, options, varargin);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 11)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',11,0)">line 11</a>)
+ode45(@(t,y) y(2),tspan,2);} 
+hw14_4
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4>@(y)y(2)')" style="font-weight:bold">hw14_4>@(y)y(2)</a>
+Too many input arguments.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('odearguments', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/private/odearguments.m', 90)" style="font-weight:bold">odearguments</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/private/odearguments.m',90,0)">line 90</a>)
+f0 = feval(ode,t0,y0,args{:});   % ODE15I sets args{1} to yp0.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 115)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',115,0)">line 115</a>)
+  odearguments(FcnHandlesUsed, solver_name, ode, tspan, y0, options, varargin);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 11)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',11,0)">line 11</a>)
+ode45(@(y) y(2),tspan,2);} 
+f2
+f2 =
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+    @(t,y)[y(2);-alpha*y(2)^2-y(1)+exp(-t)]
+f2(1)
+{Not enough input arguments.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4>@(t,y)[y(2);-alpha*y(2)^2-y(1)+exp(-t)]')" style="font-weight:bold">hw14_4>@(t,y)[y(2);-alpha*y(2)^2-y(1)+exp(-t)]</a>} 
+f2(1:end)
+{Not enough input arguments.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4>@(t,y)[y(2);-alpha*y(2)^2-y(1)+exp(-t)]')" style="font-weight:bold">hw14_4>@(t,y)[y(2);-alpha*y(2)^2-y(1)+exp(-t)]</a>} 
+f2(1)
+{Not enough input arguments.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4>@(t,y)[y(2);-alpha*y(2)^2-y(1)+exp(-t)]')" style="font-weight:bold">hw14_4>@(t,y)[y(2);-alpha*y(2)^2-y(1)+exp(-t)]</a>} 
+f2(1:end)
+{Not enough input arguments.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4>@(t,y)[y(2);-alpha*y(2)^2-y(1)+exp(-t)]')" style="font-weight:bold">hw14_4>@(t,y)[y(2);-alpha*y(2)^2-y(1)+exp(-t)]</a>} 
+y(2)
+{Undefined function or variable 'y'.} 
+hw14_4
+Y(:,1)(1)
+{Error: ()-indexing must appear last in an index expression.} 
+Y(1,1)
+ans =
+     2
+Y(2,1)
+ans =
+    1.9532
+hw14_4
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('plot')" style="font-weight:bold">plot</a>
+Invalid data argument.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 16)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',16,0)">line 16</a>)
+plot(t,f_en)} 
+hw14_4
+{Index in position 1 is invalid. Array indices must be positive integers or logical values.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4>@(t)1/2*Y(t,1).^2+1/2*Y(t,2).^2')" style="font-weight:bold">hw14_4>@(t)1/2*Y(t,1).^2+1/2*Y(t,2).^2</a>
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 16)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',16,0)">line 16</a>)
+plot(t,f_en(t))} 
+hw14_4
+{Index in position 1 is invalid. Array indices must be positive integers or logical values.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 16)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',16,0)">line 16</a>)
+plot(t,1/2*Y(t,1).^2+1/2*Y(t,2).^2)} 
+Y(t,1).^2
+{Index in position 1 is invalid. Array indices must be positive integers or logical values.} 
+t
+t =
+         0
+    0.0457
+    0.0913
+    0.1370
+    0.1827
+    0.3892
+    0.5957
+    0.8023
+    1.0088
+    1.2450
+    1.4811
+    1.7173
+    1.9535
+    2.1771
+    2.4008
+    2.6244
+    2.8480
+    3.0545
+    3.2609
+    3.4673
+    3.6738
+    3.8819
+    4.0901
+    4.2983
+    4.5064
+    4.6978
+    4.8892
+    5.0806
+    5.2719
+    5.4675
+    5.6630
+    5.8585
+    6.0540
+    6.2444
+    6.4348
+    6.6251
+    6.8155
+    7.0113
+    7.2070
+    7.4028
+    7.5985
+    7.8128
+    8.0271
+    8.2414
+    8.4557
+    8.6759
+    8.8962
+    9.1164
+    9.3366
+    9.5449
+    9.7532
+    9.9616
+   10.1699
+   10.3821
+   10.5942
+   10.8064
+   11.0186
+   11.2017
+   11.3849
+   11.5680
+   11.7511
+   11.9558
+   12.1604
+   12.3650
+   12.5696
+   12.7513
+   12.9330
+   13.1147
+   13.2964
+   13.4978
+   13.6992
+   13.9005
+   14.1019
+   14.3168
+   14.5317
+   14.7466
+   14.9615
+   15.1753
+   15.3891
+   15.6029
+   15.8166
+   16.0311
+   16.2456
+   16.4601
+   16.6746
+   16.8466
+   17.0185
+   17.1905
+   17.3624
+   17.5344
+   17.7063
+   17.8783
+   18.0502
+   18.2557
+   18.4612
+   18.6666
+   18.8721
+   19.0552
+   19.2383
+   19.4214
+   19.6045
+   19.8055
+   20.0066
+   20.2076
+   20.4086
+   20.6235
+   20.8384
+   21.0533
+   21.2682
+   21.4824
+   21.6966
+   21.9108
+   22.1250
+   22.3388
+   22.5526
+   22.7665
+   22.9803
+   23.1964
+   23.4124
+   23.6284
+   23.8445
+   24.0175
+   24.1904
+   24.3634
+   24.5364
+   24.7434
+   24.9503
+   25.1573
+   25.3643
+   25.5375
+   25.7107
+   25.8839
+   26.0570
+   26.2618
+   26.4665
+   26.6713
+   26.8760
+   27.0905
+   27.3051
+   27.5196
+   27.7341
+   27.9445
+   28.1548
+   28.3652
+   28.5756
+   28.7805
+   28.9855
+   29.1904
+   29.3954
+   29.6095
+   29.8236
+   30.0378
+   30.2519
+   30.4272
+   30.6025
+   30.7777
+   30.9530
+   31.1563
+   31.3597
+   31.5630
+   31.7663
+   31.9452
+   32.1241
+   32.3029
+   32.4818
+   32.6895
+   32.8972
+   33.1049
+   33.3126
+   33.5263
+   33.7400
+   33.9537
+   34.1673
+   34.3756
+   34.5838
+   34.7921
+   35.0004
+   35.2056
+   35.4109
+   35.6161
+   35.8214
+   36.0281
+   36.2348
+   36.4415
+   36.6482
+   36.8291
+   37.0099
+   37.1908
+   37.3716
+   37.5720
+   37.7723
+   37.9726
+   38.1729
+   38.3570
+   38.5411
+   38.7252
+   38.9093
+   39.1195
+   39.3297
+   39.5399
+   39.7501
+   39.9646
+   40.1791
+   40.3936
+   40.6081
+   40.8151
+   41.0222
+   41.2292
+   41.4362
+   41.6425
+   41.8488
+   42.0551
+   42.2615
+   42.4615
+   42.6614
+   42.8614
+   43.0614
+   43.2487
+   43.4359
+   43.6231
+   43.8103
+   44.0067
+   44.2031
+   44.3996
+   44.5960
+   44.7855
+   44.9750
+   45.1645
+   45.3540
+   45.5664
+   45.7788
+   45.9912
+   46.2036
+   46.4217
+   46.6398
+   46.8579
+   47.0760
+   47.2826
+   47.4893
+   47.6960
+   47.9027
+   48.1111
+   48.3195
+   48.5279
+   48.7363
+   48.9289
+   49.1215
+   49.3141
+   49.5067
+   49.7017
+   49.8968
+   50.0918
+   50.2869
+   50.4776
+   50.6683
+   50.8590
+   51.0498
+   51.2451
+   51.4405
+   51.6359
+   51.8313
+   52.0455
+   52.2597
+   52.4739
+   52.6881
+   52.9086
+   53.1291
+   53.3497
+   53.5702
+   53.7784
+   53.9865
+   54.1947
+   54.4028
+   54.6148
+   54.8267
+   55.0387
+   55.2506
+   55.4342
+   55.6178
+   55.8014
+   55.9851
+   56.1892
+   56.3934
+   56.5975
+   56.8017
+   56.9839
+   57.1661
+   57.3483
+   57.5305
+   57.7316
+   57.9328
+   58.1339
+   58.3350
+   58.5499
+   58.7648
+   58.9797
+   59.1946
+   59.4086
+   59.6226
+   59.8366
+   60.0506
+   60.2647
+   60.4788
+   60.6928
+   60.9069
+   61.0795
+   61.2521
+   61.4247
+   61.5973
+   61.7700
+   61.9426
+   62.1152
+   62.2878
+   62.4929
+   62.6981
+   62.9032
+   63.1083
+   63.2917
+   63.4751
+   63.6584
+   63.8418
+   64.0426
+   64.2435
+   64.4444
+   64.6453
+   64.8602
+   65.0750
+   65.2899
+   65.5048
+   65.7191
+   65.9334
+   66.1477
+   66.3620
+   66.5756
+   66.7893
+   67.0029
+   67.2165
+   67.4324
+   67.6482
+   67.8641
+   68.0800
+   68.2533
+   68.4267
+   68.6000
+   68.7733
+   68.9807
+   69.1880
+   69.3953
+   69.6026
+   69.7756
+   69.9486
+   70.1216
+   70.2945
+   70.4991
+   70.7038
+   70.9084
+   71.1130
+   71.3275
+   71.5420
+   71.7566
+   71.9711
+   72.1816
+   72.3920
+   72.6025
+   72.8129
+   73.0178
+   73.2227
+   73.4276
+   73.6326
+   73.8471
+   74.0616
+   74.2761
+   74.4906
+   74.6657
+   74.8408
+   75.0159
+   75.1910
+   75.3945
+   75.5979
+   75.8014
+   76.0049
+   76.1836
+   76.3623
+   76.5410
+   76.7197
+   76.9273
+   77.1349
+   77.3425
+   77.5501
+   77.7638
+   77.9775
+   78.1912
+   78.4049
+   78.6132
+   78.8215
+   79.0298
+   79.2382
+   79.4433
+   79.6485
+   79.8537
+   80.0589
+   80.2659
+   80.4729
+   80.6799
+   80.8868
+   81.0675
+   81.2482
+   81.4289
+   81.6095
+   81.8100
+   82.0105
+   82.2109
+   82.4114
+   82.5954
+   82.7793
+   82.9633
+   83.1473
+   83.3574
+   83.5675
+   83.7776
+   83.9877
+   84.2021
+   84.4165
+   84.6309
+   84.8454
+   85.0524
+   85.2594
+   85.4665
+   85.6735
+   85.8798
+   86.0860
+   86.2922
+   86.4985
+   86.6987
+   86.8990
+   87.0992
+   87.2994
+   87.4864
+   87.6734
+   87.8604
+   88.0474
+   88.2440
+   88.4406
+   88.6372
+   88.8338
+   89.0232
+   89.2125
+   89.4019
+   89.5912
+   89.8035
+   90.0159
+   90.2282
+   90.4405
+   90.6585
+   90.8765
+   91.0945
+   91.3125
+   91.5191
+   91.7258
+   91.9325
+   92.1392
+   92.3475
+   92.5558
+   92.7641
+   92.9723
+   93.1652
+   93.3580
+   93.5509
+   93.7437
+   93.9385
+   94.1333
+   94.3281
+   94.5229
+   94.7139
+   94.9048
+   95.0957
+   95.2867
+   95.4819
+   95.6771
+   95.8724
+   96.0676
+   96.2817
+   96.4959
+   96.7100
+   96.9241
+   97.1448
+   97.3655
+   97.5861
+   97.8068
+   98.0149
+   98.2230
+   98.4310
+   98.6391
+   98.8509
+   99.0627
+   99.2745
+   99.4863
+   99.6148
+   99.7432
+   99.8716
+  100.0000
+hw14_4
+{Index in position 1 is invalid. Array indices must be positive integers or logical values.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 15)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',15,0)">line 15</a>)
+f_en = 1/2*Y(t,1).^2+1/2*Y(t,2).^2;} 
+hw14_4
+hw14_4
+alpha =
+    0.3000
+[Warning: Failure at t=2.769844e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 17)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',17,0)">line 17</a>)] 
+[Warning: Failure at t=2.769844e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 18)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',18,0)">line 18</a>)] 
+hw14_4
+odeset
+          AbsTol: [ positive scalar or vector {1e-6} ]
+          RelTol: [ positive scalar {1e-3} ]
+     NormControl: [ on | {off} ]
+     NonNegative: [ vector of integers ]
+       OutputFcn: [ function_handle ]
+       OutputSel: [ vector of integers ]
+          Refine: [ positive integer ]
+           Stats: [ on | {off} ]
+     InitialStep: [ positive scalar ]
+         MaxStep: [ positive scalar ]
+             BDF: [ on | {off} ]
+        MaxOrder: [ 1 | 2 | 3 | 4 | {5} ]
+        Jacobian: [ matrix | function_handle ]
+        JPattern: [ sparse matrix ]
+      Vectorized: [ on | {off} ]
+            Mass: [ matrix | function_handle ]
+MStateDependence: [ none | {weak} | strong ]
+       MvPattern: [ sparse matrix ]
+    MassSingular: [ yes | no | {maybe} ]
+    InitialSlope: [ vector ]
+          Events: [ function_handle ]
+
+hw14_4
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+odeset.AbsTol
+{Undefined variable "odeset" or class "odeset.AbsTol".} 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+Undefined function or variable 'duffing_ode'.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 35)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',35,0)">line 35</a>)
+ode45(duffing_ode, [0 T], y_ic, params); % (10)
+
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+Undefined function or variable 'T'.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 35)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',35,0)">line 35</a>)
+ode45(f2, [0 T], y_ic, params); % (10)
+
+hw14_4
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 31)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',31,0)">line 31</a>)] 
+{Undefined function or variable 'duffing_event'.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('odeevents', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/private/odeevents.m', 28)" style="font-weight:bold">odeevents</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/private/odeevents.m',28,0)">line 28</a>)
+  eventValue = feval(eventFcn,t0,y0,eventArgs{:});
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 148)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',148,0)">line 148</a>)
+  odeevents(FcnHandlesUsed,odeFcn,t0,y0,options,varargin);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 35)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',35,0)">line 35</a>)
+ode45(f2, [0 2*pi], y_ic, params); % (10)} 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+Undefined function 'duffing_event' for input arguments of type 'double'.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('odeevents', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/private/odeevents.m', 28)" style="font-weight:bold">odeevents</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/private/odeevents.m',28,0)">line 28</a>)
+  eventValue = feval(eventFcn,t0,y0,eventArgs{:});   
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 148)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',148,0)">line 148</a>)
+  odeevents(FcnHandlesUsed,odeFcn,t0,y0,options,varargin);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 35)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',35,0)">line 35</a>)
+ode45(f2, [0 2*pi], y_ic, params); % (10)
+
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+Undefined function or variable 'T'.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 35)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',35,0)">line 35</a>)
+ode45(f2, [0:T], y_ic, params); 
+
+hw14_4
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 31)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',31,0)">line 31</a>)] 
+{Undefined function or variable 'T'.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 35)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',35,0)">line 35</a>)
+ode45(f2, [0 T], y_ic, params); } 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+Undefined function 'duffing_event' for input arguments of type 'double'.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('odeevents', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/private/odeevents.m', 28)" style="font-weight:bold">odeevents</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/private/odeevents.m',28,0)">line 28</a>)
+  eventValue = feval(eventFcn,t0,y0,eventArgs{:});   
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 148)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',148,0)">line 148</a>)
+  odeevents(FcnHandlesUsed,odeFcn,t0,y0,options,varargin);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 35)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',35,0)">line 35</a>)
+ode45(f2, [0 2*pi], y_ic, params); 
+
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+Output argument "varargout{4}" (and maybe others) not assigned during call to "ode45".
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 35)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',35,0)">line 35</a>)
+ode45(f2, [0 2*pi], y_ic); 
+
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+Output argument "varargout{4}" (and maybe others) not assigned during call to "ode45".
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 35)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',35,0)">line 35</a>)
+ode45(f2, [0 2*pi], y_ic); 
+
+hw14_4
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 31)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',31,0)">line 31</a>)] 
+{Undefined function or variable 'duffing_ode'.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 33)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',33,0)">line 33</a>)
+[t, Y] = ode45(duffing_ode, [0:2*pi:T], y_ic); } 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+Undefined function or variable 'T'.
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 33)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',33,0)">line 33</a>)
+[t, Y] = ode45(f2, [0:2*pi:T], y_ic); 
+
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+hw14_3
+[Warning: Failure at t=-2.998333e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998330e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m', 299)" style="font-weight:bold">ode23</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m',299,0)">line 299</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998330e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode113', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m', 425)" style="font-weight:bold">ode113</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m',425,0)">line 425</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998346e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (7.105427e-15) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode15s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m', 730)" style="font-weight:bold">ode15s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m',730,0)">line 730</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998337e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.065223e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m', 401)" style="font-weight:bold">ode23s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m',401,0)">line 401</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998344e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.065226e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23t', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m', 647)" style="font-weight:bold">ode23t</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m',647,0)">line 647</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-2.998339e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.065224e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23tb', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m', 553)" style="font-weight:bold">ode23tb</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m',553,0)">line 553</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+hw14_3
+hw14_3
+hw14_3
+[Warning: Failure at t=-9.999500e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (2.842171e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999499e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (2.842171e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m', 299)" style="font-weight:bold">ode23</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m',299,0)">line 299</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999499e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (2.842171e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode113', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m', 425)" style="font-weight:bold">ode113</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m',425,0)">line 425</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999504e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (2.842171e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode15s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m', 730)" style="font-weight:bold">ode15s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m',730,0)">line 730</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999501e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (3.552536e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m', 401)" style="font-weight:bold">ode23s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m',401,0)">line 401</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999503e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (3.552537e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23t', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m', 647)" style="font-weight:bold">ode23t</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m',647,0)">line 647</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999502e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (3.552537e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23tb', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m', 553)" style="font-weight:bold">ode23tb</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m',553,0)">line 553</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+hw14_3
+[Warning: Failure at t=-9.999500e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (2.842171e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999499e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (2.842171e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m', 299)" style="font-weight:bold">ode23</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23.m',299,0)">line 299</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999499e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (2.842171e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode113', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m', 425)" style="font-weight:bold">ode113</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode113.m',425,0)">line 425</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999504e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (2.842171e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode15s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m', 730)" style="font-weight:bold">ode15s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode15s.m',730,0)">line 730</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999501e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (3.552536e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23s', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m', 401)" style="font-weight:bold">ode23s</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23s.m',401,0)">line 401</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999503e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (3.552537e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23t', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m', 647)" style="font-weight:bold">ode23t</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23t.m',647,0)">line 647</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+[Warning: Failure at t=-9.999502e+00.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (3.552537e-14) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode23tb', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m', 553)" style="font-weight:bold">ode23tb</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode23tb.m',553,0)">line 553</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_3', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m', 9)" style="font-weight:bold">hw14_3</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_3.m',9,0)">line 9</a>)] 
+hw14_3

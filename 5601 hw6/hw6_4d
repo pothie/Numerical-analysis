@@ -1,0 +1,8 @@
+hw6_4d
+    "                      accurency of partial pivoting      "    " accurency of full pivoting        "
+
+    "Before perturbation:  "           "1.923e-16"                    "1406823102.7852"
+
+    "After perturbation:  "           "1.923e-16"                     "1406823102.7852"
+
+diary

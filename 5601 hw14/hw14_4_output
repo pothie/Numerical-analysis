@@ -1,0 +1,16 @@
+hw14_4
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 32)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',32,0)">line 32</a>)] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 36)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',36,0)">line 36</a>)] 
+[Warning: Failure at t=8.126042e+02.  Unable to meet integration tolerances without reducing the step size
+below the smallest value allowed (1.818989e-12) at time t.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ode45', '/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m', 360)" style="font-weight:bold">ode45</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2018a.app/toolbox/matlab/funfun/ode45.m',360,0)">line 360</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('hw14_4', '/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m', 37)" style="font-weight:bold">hw14_4</a> (<a href="matlab: opentoline('/Users/yidichen/Desktop/matlab/5601 hw14/hw14_4.m',37,0)">line 37</a>)] 
+   130
+
+diary
