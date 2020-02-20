@@ -1,0 +1,30 @@
+%9.4-21
+A = [1 2 3 4;1 -2 3 -4;2 3 5 7];
+b1 = zeros(3,1);
+disp('rref of A')
+rref of A
+disp(rref([A b1]))
+     1     0     0     3     0
+     0     1     0     2     0
+     0     0     1    -1     0
+
+
+
+
+
+
+
+
+
+
+
+
+b2 = zeros(4,1);
+disp('rref of A transpose')
+rref of A transpose
+disp(rref([A' b2]))
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     0
+diary

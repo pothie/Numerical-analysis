@@ -1,0 +1,24 @@
+%hw2_5
+%a 
+n = 2000;
+A = rand(n,n);
+[V,D] = eig(A);
+disp(['norm of AV-VD: ' num2str(norm(A*V-V*D))]);
+
+norm of AV-VD: 2.4321e-12
+
+
+%b
+A = [1 1;0 1];
+[V,D] = eig(A);
+disp([V;D])
+V
+    1.0000   -1.0000
+         0    0.0000
+D
+    1.0000         0
+         0    1.0000
+det(V)
+ans =
+   2.2204e-16
+diary

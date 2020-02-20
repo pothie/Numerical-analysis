@@ -1,0 +1,13 @@
+%3
+m = 6;
+n = 7;
+p = 9;
+A = randn(m,n);
+B = randn(n,p);
+C = A*B; % left hand side
+RHS = zeros(m,p);
+for x = 1:n
+    RHS = RHS + A(:,x)*B(x,:);
+end
+disp('difference between C and RHS')
+disp(norm(RHS-C))
